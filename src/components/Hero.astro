@@ -4,13 +4,15 @@ import Badge from "../components/Badge.astro"
 import LinkedInIcon from "../icon/Linkedin.astro"
 import MailIcon from "../icon/Mail.astro"
 import SocialPill from "./SocialPill.astro"
+import abel from "../assets/abel.jpeg";
+
 ---
 
 <div class="max-w-xl">
   <div class="flex flex-col md:flex-row gap-4 mb-4 items-center">
     <img
       class="rounded-full shadow-lg w-24 h-24 md:w-60 md:h-60"
-      src="src/assets/abel.jpeg"
+      src={abel.src}
       alt={personalImageAlt}
     />
     <a

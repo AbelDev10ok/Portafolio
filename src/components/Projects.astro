@@ -6,6 +6,8 @@ import Spring from "../icon/Spring.astro"
 import Postgresql from "../icon/Postgresql.astro"
 import Link from "../icon/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import rentas from "../assets/rentas.png"
+import { record } from "astro:schema"
 
 const TAGS = {
   REACT: {
@@ -36,7 +38,7 @@ const PROJECTS = [
       "Mi proyecto personal de gestión de alquiler de embarcaciones demuestra mi capacidad para construir APIs RESTful seguras y eficientes, utilizando Spring Security y JWT para la autenticación de usuarios autenticados y con roles.",
     github_frontend: "https://github.com/AbelDev10ok/Front-Boats-Rental",
     github_backend: "https://github.com/AbelDev10ok/Back-Boats-Rental",
-    image: "src/assets/rentas.png",
+    image: {rentas},
     
     tags: [TAGS.REACT, TAGS.TAILWIND, TAGS.SPRINGBOOT, TAGS.POSTGRESQL],
   }
@@ -49,7 +51,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
       <div class="w-full md:w-2/3">
         <div class="relative flex flex-col h-60 items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img alt="Proyecto rental boats" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+          <img alt="Proyecto rental boats" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={rentas.src} />
         </div>
       </div>
 
