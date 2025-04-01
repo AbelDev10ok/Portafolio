@@ -1,0 +1,55 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+import Experience from '../components/Experience.astro';
+import Hero from '../components/Hero.astro';
+import Linkedin from '../icon/Linkedin.astro';
+import Github from '../icon/Github.astro';
+import Mail from '../icon/Mail.astro'
+import Briefcase from '../icon/Briefcase.astro'
+import CodeIcon from "../icon/Code.astro"
+import TitleSection from '../components/TitleSection.astro';
+import Projects from '../components/Projects.astro';
+import ProfileCheck from '../icon/ProfileCheck.astro';
+import AboutMe from '../components/AboutMe.astro';
+---
+
+<Layout 
+	title="Portafolio de Abel Alarcón - Desarrollopr y Programador web "
+
+	>
+	<main class="px-4">
+		<SectionContainer class="py-16 md:py-36">
+			<Hero>
+			</slot>
+		  </Hero>
+		  </SectionContainer>
+		  <div class="space-y-24">
+		  <SectionContainer id="experiencia">
+			<TitleSection>
+			  <Briefcase class="size-8" />
+			  Experiencia laboral
+			</TitleSection>
+			<Experience />
+		  </SectionContainer>
+	  
+		  <SectionContainer id="proyectos">
+			<TitleSection>
+			  <CodeIcon class="size-7" />
+			  Proyectos
+			</TitleSection>
+			<Projects />
+		  </SectionContainer>
+	  
+		  <SectionContainer id="sobre-mi">
+			<TitleSection>
+			  <ProfileCheck class="size-8" />
+			  Sobre mí
+			</TitleSection>
+			<AboutMe />
+		  </SectionContainer>
+		</div>
+	</main>
+</Layout>

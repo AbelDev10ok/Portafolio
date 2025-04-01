@@ -1,0 +1,48 @@
+---
+const personalImageAlt = "Abel Alarcón"
+import Badge from "../components/Badge.astro"
+import LinkedInIcon from "../icon/Linkedin.astro"
+import MailIcon from "../icon/Mail.astro"
+import SocialPill from "./SocialPill.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex flex-col md:flex-row gap-4 mb-4 items-center">
+    <img
+      class="rounded-full shadow-lg w-24 h-24 md:w-60 md:h-60"
+      src="src/assets/abel.jpeg"
+      alt={personalImageAlt}
+    />
+    <a
+      href="https://www.linkedin.com/in/abel-alarcon-6a951a30a/"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Disponible para trabajar</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, soy Abel
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-yellow-500 [&>strong]:font-semibold dark:text-gray-300"
+  >
+    Estudiante Avanzado en Licenciatura en sistemas. <strong
+      >Desarrolladores de aplicaciones web, con conocimientos solidos tanto en Frontend como Backend</strong
+    > de Buenos Aires, Argentina. Especializado en el desarrollo de aplicaciones web
+    únicas.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:miduga@gmail.com">
+      <MailIcon class="size-4" />
+      Contáctame
+    </SocialPill>
+    <SocialPill href="https://www.linkedin.com/in/abel-alarcon-6a951a30a/">
+      <LinkedInIcon class="size-4" />
+      LinkedIn
+    </SocialPill>
+  </nav>
+</div>
